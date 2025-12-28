@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column (name="category_id")
 	private int id;
 	@Override
 	public String toString() {
@@ -15,6 +16,9 @@ public class Category {
 		super();
 		this.id = id;
 		this.name = name;
+	}
+	public Category() {
+		// TODO Auto-generated constructor stub
 	}
 	public int getId() {
 		return id;
